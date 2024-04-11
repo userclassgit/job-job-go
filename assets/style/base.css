@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/* :root {
+
+} */
+
+.container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+body {
+font-family: "Roboto", sans-serif;
+height: 100vh;
+}
