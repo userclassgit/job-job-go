@@ -1,17 +1,18 @@
-import { listen, select } from './utils.js';
 'use strict';
+import { listen, select } from './utils.js';
 const user = {
-    username: "andre",
+    email: "andre@github.com",
     password: "123"
 };
 const API_RANDOMUSER = 'https://randomuser.me/api/?nat=CA&results=10&seed=same';
 const API_OPTIONS = { method: 'GET', header: { 'Content-type': 'application/JSON; charset=UTF-8' }, mode: 'cors' };
-const userInput = select('input[name=username]');
-const passInput = select('input[name=password]');
-const loginBtn = select('input[name=login]');
+const emailInput = select('.login-form input[name=email]');
+const passInput = select('.login-form input[name=password]');
+const loginBtn = select('.login-form button');
 const usersContainer = select('.users');
 
 const log = console.log;
+const tip = (msg) => select('.error').innerText = msg;
 const saveItem = (key, item) => localStorage.setItem(key, JSON.stringify(item));
 const loadItem = (key) => JSON.parse(localStorage.getItem(key));
 async function retriveData(endpoint, options = {}, success = log, error = log) {
@@ -24,9 +25,9 @@ async function retriveData(endpoint, options = {}, success = log, error = log) {
         error(err);
     }
 }
-function login(username, password) {
+function login(email, password) {
     const user = loadItem("user");
-    return user.username === username && user.password === password;
+    return user.email === email && user.password === password;
 }
 function addUsers(users) {
     users.forEach(u => {
@@ -39,10 +40,16 @@ function addUsers(users) {
 // Main
 localStorage.clear();
 saveItem("user", user);
-// btn trigger
-if (login("andre", "123")) {
-    log(`Hello! ${user.username}`);
+if(loginBtn){
+    listen('click', loginBtn, e => {
+        if (login(emailInput.value, passInput.value)) {
+            log(`Hello! ${user.email}`);
+            window.location.href = 'home.html';
+        } else {
+            log(`Login failed with ${emailInput.value} and ${passInput.value}`);
+        }
+        e.preventDefault();
+    });
+}else{
     retriveData(API_RANDOMUSER, API_OPTIONS, json=>addUsers(json.results));
-} else {
-    log(`Login failed with ${user.username}`);
 }

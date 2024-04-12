@@ -1,25 +1,35 @@
 @charset "utf-8";
 
-/* :root {
-
-} */
+:root {
+  --main-color:#6a5acd;
+  --background-color: #eceff1;
+  --font-family: 'Roboto', sans-serif;
+  --color:#333;
+  --input-border-radius: 60px;
+}
 
 .container {
   width: min(100% - 30px, 1080px);
   margin-inline: auto;
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body {
+  font-family: var(--font-family);
+  height: 100svh;
+  background-color: var(--background-color);
+  color: var(--color);
 }
 
 .flex {
   display: flex;
 }
 
-body {
-font-family: "Roboto", sans-serif;
-height: 100vh;
+.grid {
+  display: grid;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
