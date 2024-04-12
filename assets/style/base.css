@@ -2,9 +2,11 @@
 
 :root {
   --main-color:#6a5acd;
-  --background-color: #eceff1;
+  --background-color: #F2F2F2;
+  --color: #2E3D45;
+  --dark-gray: #AFAFAF;
+  --white: #fff;
   --font-family: 'Roboto', sans-serif;
-  --color:#333;
   --input-border-radius: 60px;
 }
 
