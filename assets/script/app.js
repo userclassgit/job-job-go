@@ -34,7 +34,7 @@ function addUsers(users) {
     users.forEach(u => {
         const { name: { title, first, last }, picture: { thumbnail } } = u;
         // add to users' container
-        log('add user', `<li class='user'><img src='${thumbnail}' /><span>${title}. ${first} ${last}</span></li>`);
+        usersContainer.innerHTML += `<li class='user'><img src='${thumbnail}' /><span>${title}. ${first} ${last}</span></li>`;
     });
 }
 
