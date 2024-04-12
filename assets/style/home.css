@@ -11,9 +11,10 @@ header {
   background-color: var(--white);
   height: 4rem;
   box-shadow: 0px 0px 10px rgba(87, 87, 87, 0.2);
+  position: relative;
   .container {
     align-items: center;
-    
+    height: 100%;
   }
 }
 
@@ -57,6 +58,20 @@ header {
     width: 20px;
     height: 20px;
   }
+}
+
+.header-mid-icons {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  a img {
+    height: 30px;
+  }
+}
+
+.header-right-content {
+  align-items: center;
 }
 
 main {
