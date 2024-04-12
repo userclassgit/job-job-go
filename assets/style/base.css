@@ -9,6 +9,7 @@
   --white: #fff;
   --font-family: 'Roboto', sans-serif;
   --input-border-radius: 60px;
+  --widget-border-radius: 25px;
 }
 
 .container {

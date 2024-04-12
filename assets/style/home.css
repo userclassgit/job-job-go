@@ -108,10 +108,36 @@ main {
     }
 
     aside {
-        width: 25%;
-        padding: 10px;
+        width: 30%;
+        padding: 0px 20px;
         margin: 50px;
-        border-radius: 20px;
+        border-radius: var(--widget-border-radius);
+    }
+
+    .left-aside {
+      padding: 0;
+      overflow: hidden;
+      .banner-img {
+        background-image: url('../media/img-profile-banner.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 115px;
+        margin-top: -20px;
+        position: relative;
+      }
+      .aside-olivia {
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, -50%);
+        border-radius: 30px;
+        border: 4px solid var(--background-color);
+        width: 80px;
+      }
+      .left-aside-content {
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     .content {
