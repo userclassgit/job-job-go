@@ -117,12 +117,41 @@ main {
     .content {
         width: 50%;
         text-align: center;
-        padding: 10px;
-        border-radius: 20px;
         margin-top: 50px;
 
-        textarea {
-            width: 100%;
+        .form{
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: 20px;
+
+            ::placeholder {
+                color: var(--dark-gray);
+            }
+            input {
+                width: 100%;
+                background-color: var(--background-color);
+                padding: 20px;
+                border-radius: 20px;
+                border: none;
+            }
+            
+            ul li {
+                display: flex;
+                gap: 5px;
+                margin: 20px 20px 0 10px;
+                color: var(--color);
+                align-items: center;
+
+                img {
+                    width: 20px;
+                    margin: 0;
+                }
+            }
+
+            img {
+                width:25px;
+                margin:20px 10px 0 0;
+            }
         }
 
         .post {
