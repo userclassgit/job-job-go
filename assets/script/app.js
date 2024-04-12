@@ -1,5 +1,5 @@
 'use strict';
-import { listen, select } from './utils.js';
+import { listen, select, sleep } from './utils.js';
 const user = {
     email: "andre@github.com",
     password: "123"
@@ -9,6 +9,7 @@ const API_OPTIONS = { method: 'GET', header: { 'Content-type': 'application/JSON
 const emailInput = select('.login-form input[name=email]');
 const passInput = select('.login-form input[name=password]');
 const loginBtn = select('.login-form button');
+const errorMsg = select('p.error');
 const usersContainer = select('.users');
 
 const log = console.log;
@@ -33,23 +34,28 @@ function addUsers(users) {
     users.forEach(u => {
         const { name: { title, first, last }, picture: { thumbnail } } = u;
         // add to users' container
-        log('add user',`<li class='user'><img src='${thumbnail}' /><span>${title}. ${first} ${last}</span></li>`);
+        log('add user', `<li class='user'><img src='${thumbnail}' /><span>${title}. ${first} ${last}</span></li>`);
     });
 }
 
 // Main
 localStorage.clear();
 saveItem("user", user);
-if(loginBtn){
+if (loginBtn) {
     listen('click', loginBtn, e => {
         if (login(emailInput.value, passInput.value)) {
             log(`Hello! ${user.email}`);
             window.location.href = 'home.html';
         } else {
             log(`Login failed with ${emailInput.value} and ${passInput.value}`);
+            emailInput.focus();
+            errorMsg.style.opacity = 1;
+            const hideError = () => log(errorMsg.style.opacity = 0);
+            listen('input', emailInput, hideError);
+            listen('input', passInput, hideError);
         }
         e.preventDefault();
     });
-}else{
-    retriveData(API_RANDOMUSER, API_OPTIONS, json=>addUsers(json.results));
+} else {
+    retriveData(API_RANDOMUSER, API_OPTIONS, json => addUsers(json.results));
 }
