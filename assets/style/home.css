@@ -134,9 +134,23 @@ main {
         border: 4px solid var(--background-color);
         width: 80px;
       }
-      .left-aside-content {
-        flex-direction: column;
-        align-items: center;
+      .followers-following {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(100% + 20px);
+        width: 150px;
+        .profile-stat {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          span:first-child {
+            
+          }
+          span:nth-child(2) {
+
+          }
+        }
       }
     }
 
