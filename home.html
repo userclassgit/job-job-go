@@ -1,27 +1,101 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Myeongjeon Lee & Jia Jia">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <title>JobJobGo</title>
-    <link rel="icon" href="./assets/media/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/style/home.css">
-    <link rel="stylesheet" href="./assets/style/reset.css">
-    <link rel="stylesheet" href="./assets/style/base.css">
-    <script type="module" src="./assets/script/app.js"></script>
-  </head>
-  <body>
-    
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Myeongjeon Lee & Jia Jia">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>JobJobGo</title>
+  <link rel="icon" href="./assets/media/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/style/home.css">
+  <link rel="stylesheet" href="./assets/style/reset.css">
+  <link rel="stylesheet" href="./assets/style/base.css">
+  <script type="module" src="./assets/script/app.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container flex flex-sb">
+      <div><span>JJG</span><input type="text" /></div>
+      <ul class="flex">
+        <li><img src="./assets/media/icon-home-dark.png" /></li>
+        <li><img src="./assets/media/icon-chat-dark.png" /></li>
+        <li><img src="./assets/media/icon-bell-dark.png" /></li>
+        <li><img src="./assets/media/icon-heart-dark.png" /></li>
+      </ul>
+      <div class="flex"><img src="./assets/media/icon-mood.png" /><span>Olivia Oreo</span></div>
+    </div>
+  </header>
+  <main>
+    <div class="container flex flex-sb">
+      <aside class="left-aside">
+        <div>aside 1</div>
+      </aside>
+      <section class="content">
+        <div>
+          <form>
+            <textarea></textarea>
+            <div class="flex flex-sb">
+              <ul class="flex">
+                <li><img src="./assets/media/icon-image.png"/></li>
+                <li><img src="./assets/media/icon-video.png"/>video</li>
+                <li><img src="./assets/media/icon-mood.png"/>mood</li>
+              </ul>
+              <div><img src="./assets/media/icon-paper-plane-light.png"/></div>
+            </div>
+          </form>
+        </div>
+        <div class="post">
+          <div class="head">
+            <img src="https://randomuser.me/api/portraits/thumb/men/4.jpg"/>
+            <span></span>
+          </div>
+          <div class="message"><img src="./assets/media/img-post-1.jpg"/></div>
+          <ul class="flex">
+            <li><img src="./assets/media/icon-heart-light.png" /></li>
+            <li><img src="./assets/media/icon-chat-light.png" /></li>
+            <li><img src="./assets/media/icon-paper-plane-light.png" /></li>
+          </ul>
+        </div>
+        <div class="post">
+          <div class="head">
+            <img src="https://randomuser.me/api/portraits/thumb/men/4.jpg"/>
+            <span></span>
+          </div>
+          <div class="message"><img src="./assets/media/img-post-2.jpg"/></div>
+          <ul class="flex">
+            <li><img src="./assets/media/icon-heart-light.png" /></li>
+            <li><img src="./assets/media/icon-chat-light.png" /></li>
+            <li><img src="./assets/media/icon-paper-plane-light.png" /></li>
+          </ul>
+        </div>
+      </section>
+      <aside class="right-aside">
+        <h2>People you may know</h2>
+        <ul class="users">
+        </ul>
+      </aside>
+    </div>
+  </main>
+  <footer>
+    <ul class="container flex flex-sb">
+      <li>@2024 JobJobGo</li>
+      <li>User Agreement</li>
+      <li>Community Guidelines</li>
+      <li>Privacy Policy</li>
+      <li>Send Feedback</li>
+    </ul>
+  </footer>
+</body>
+
 </html>

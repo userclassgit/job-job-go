@@ -1,1 +1,49 @@
 @charset "utf-8";
+.flex-sb {
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+}
+
+main {
+    min-height: 500px;
+
+    aside,
+    section > div {
+        background-color: var(--white);
+    }
+
+    aside {
+        width: 25%;
+        padding: 10px;
+        margin: 50px;
+        border-radius: 20px;
+    }
+
+    .content {
+        width: 50%;
+        text-align: center;
+        padding: 10px;
+        border-radius: 20px;
+        margin-top: 50px;
+
+        textarea {
+            width: 100%;
+        }
+
+        .post {
+            background-color: var(--white);
+            padding: 10px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+    }
+}
+
+footer {
+}
