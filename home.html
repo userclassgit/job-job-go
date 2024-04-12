@@ -39,7 +39,27 @@
   <main>
     <div class="container flex flex-sb">
       <aside class="left-aside">
-        <div>aside 1</div>
+        <div>
+          <img src="./assets/media/img-profile-banner.jpg" />
+          <ul class="flex flex-sb">
+            <li>
+              <h2>1,203</h2>
+              <span>Followers</span>
+            </li>
+            <li>
+              <img src="https://randomuser.me/api/portraits/thumb/women/29.jpg"/>
+              <h2>Olivia Oreo</h2>
+              <span>@olivia_oreo</span>
+            </li>
+            <li>
+              <h2>1,346</h2>
+              <span>Following</span>
+            </li>
+          </ul>
+          <p>Hello: lam a product manager
+            based in South Africa.</p>
+          <input type="button" value="Upgrade to Premium"/>
+        </div>
       </aside>
       <section class="content">
         <div>
@@ -56,11 +76,19 @@
           </form>
         </div>
         <div class="post">
-          <div class="head">
+          <div class="head flex">
             <img src="https://randomuser.me/api/portraits/thumb/men/4.jpg"/>
-            <span></span>
+            <div class="flex flex-sb">
+              <div class="grid"><span>Tim Twizzlers</span><span>Co-founder of PirateFlix</span></div>
+              <div class="grid"><img src="./assets/media/icon-3-dots.png"/><span>1 hour ago</span></div>
+            </div>
           </div>
-          <div class="message"><img src="./assets/media/img-post-1.jpg"/></div>
+          <div class="message">
+            <p>Our company is currently looking for a senior iOS engineer with at least 16 years
+              of experience in Swift. A degree in CS is optional but a black belt in Brazilian
+              Juitsu is mendatorv. Preterablvtemale. Anvwavs. here's a cool picture of mv car.</p>
+            <img src="./assets/media/img-post-1.jpg"/>
+          </div>
           <ul class="flex">
             <li><img src="./assets/media/icon-heart-light.png" /></li>
             <li><img src="./assets/media/icon-chat-light.png" /></li>
@@ -68,11 +96,19 @@
           </ul>
         </div>
         <div class="post">
-          <div class="head">
-            <img src="https://randomuser.me/api/portraits/thumb/men/4.jpg"/>
-            <span></span>
+          <div class="head flex">
+            <img src="https://randomuser.me/api/portraits/thumb/women/29.jpg"/>
+            <div class="flex flex-sb">
+              <div class="grid"><span>Selena Skittles</span><span>IOS Software Engineering</span></div>
+              <div class="grid"><img src="./assets/media/icon-3-dots.png"/><span>1 hour ago</span></div>
+            </div>
           </div>
-          <div class="message"><img src="./assets/media/img-post-2.jpg"/></div>
+          <div class="message">
+            <p>DO NOT apply for a job at PirateFlix. I applied for the position of an iOS engineer
+              and got rejected bc I didn't have at least 16 years of expeirence in Swift. The
+              Swift programming itself is barely 10 years old btw. Unbelievable.</p>
+            <img src="./assets/media/img-post-2.jpg"/>
+          </div>
           <ul class="flex">
             <li><img src="./assets/media/icon-heart-light.png" /></li>
             <li><img src="./assets/media/icon-chat-light.png" /></li>
@@ -82,8 +118,7 @@
       </section>
       <aside class="right-aside">
         <h2>People you may know</h2>
-        <ul class="users">
-        </ul>
+        <ul class="users"></ul>
       </aside>
     </div>
   </main>
