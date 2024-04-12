@@ -4,7 +4,7 @@ const user = {
     email: "andre@github.com",
     password: "123"
 };
-const API_RANDOMUSER = 'https://randomuser.me/api/?nat=CA&results=10&seed=same';
+const API_RANDOMUSER = 'https://randomuser.me/api/?nat=CA&results=10';
 const API_OPTIONS = { method: 'GET', header: { 'Content-type': 'application/JSON; charset=UTF-8' }, mode: 'cors' };
 const emailInput = select('.login-form input[name=email]');
 const passInput = select('.login-form input[name=password]');
@@ -32,9 +32,11 @@ function login(email, password) {
 }
 function addUsers(users) {
     users.forEach(u => {
-        const { name: { title, first, last }, picture: { thumbnail } } = u;
+        const { name: { title, first, last }, picture: { thumbnail }, location:{city} } = u;
         // add to users' container
-        usersContainer.innerHTML += `<li class='user flex flex-sb'><img src='${thumbnail}' /><span>${title}. ${first} ${last}</span><img src='./assets/media/icon-plus.png'/></li>`;
+        usersContainer.innerHTML += `<li class='user flex flex-sb'><img class='portrait' src='${thumbnail}' />
+        <div class='grid'><span>${first} ${last}</span><span>${city}</span></div>
+        <img class='add' src='./assets/media/icon-plus.png'/></li>`;
     });
 }
 
