@@ -1,168 +1,174 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Myeongjeon Lee & Jia Jia">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>JobJobGo</title>
+    <link rel="icon" href="./assets/media/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/style/home.css">
+    <link rel="stylesheet" href="./assets/style/reset.css">
+    <link rel="stylesheet" href="./assets/style/base.css">
+    <script type="module" src="./assets/script/app.js"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Myeongjeon Lee & Jia Jia">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <title>JobJobGo</title>
-  <link rel="icon" href="./assets/media/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./assets/style/home.css">
-  <link rel="stylesheet" href="./assets/style/reset.css">
-  <link rel="stylesheet" href="./assets/style/base.css">
-  <script type="module" src="./assets/script/app.js"></script>
-</head>
-
-<body>
-  <header>
-    <div class="container flex flex-sb">
-      <div class="header-left-content flex">
-        <div class="logo-circle center"><div class="logo"></div></div>
-        <div class="search-bar-wrapper">
-          <input class="search-bar" type="text" placeholder="">
-          <img class="search-icon" src="./assets/media/icon-search.png" alt="Search">
-        </div>
-      </div>
-      <ul class="flex header-mid-icons flex-sb">
-        <li><a href=""><img src="./assets/media/icon-home-dark.png" /></a></li>
-        <li><a href=""><img src="./assets/media/icon-chat-dark.png" /></a></li>
-        <li><a href=""><img src="./assets/media/icon-bell-dark.png" /></a></li>
-        <li><a href=""><img src="./assets/media/icon-heart-dark.png" /></a></li>
-      </ul>
-      <div class="flex header-right-content flex-sb">
-        <div class="pfp-name center">
-          <div class="header-pfp">
-            <img src="./assets/media/img-olivia.png" />
+  <body>
+    <header>
+      <div class="container flex flex-sb">
+        <div class="header-left-content flex">
+          <div class="logo-circle center">
+            <div class="logo"></div>
           </div>
-          <span>Olivia Oreo</span>
-        </div>
-        <img class="dropdown-icon" src="./assets/media/icon-down-arrow.png" alt="">
-      </div>
-    </div>
-  </header>
-  <main>
-    <div class="container flex flex-sb">
-      <aside class="left-aside">
-        <div class="banner-img">
-          <img class="aside-olivia" src="./assets/media/img-olivia.png" alt="">
-          <div class="followers-following flex flex-sb">
-            <div class="profile-stat">
-              <span>1,203</span>
-              <span>Followers</span>
-            </div>
-            <div class="profile-stat">
-              <span>1,203</span>
-              <span>Followers</span>
-            </div>
+          <div class="search-bar-wrapper">
+            <input class="search-bar" type="text" placeholder="">
+            <img class="search-icon" src="./assets/media/icon-search.png" alt="Search">
           </div>
         </div>
-        <div class="username-tag">
-          <span>Olivia Oreo</span>
-          <span>@olivia_oreo</span>
-        </div>
-        <p class="bio">
-          Hello👋 I am a product manager based in South Africa.
-        </p>
-        <button class="premium">Upgrade to Premium</button>
-      </aside>
-      <section class="content">
-        <div class="form">
-          <form>
-            <input type="text" placeholder="What's in your mind?">
-            <div class="flex flex-sb">
-              <ul class="flex">
-                <a href="#"><li><img src="./assets/media/icon-image.png"/><span>image</span></li></a>
-                <a href="#"><li><img src="./assets/media/icon-video.png"/><span>video</span></li></a>
-                <a href="#"><li><img src="./assets/media/icon-mood.png"/><span>mood</span></li></a>
-              </ul>
-              <a href="#"><img src="./assets/media/icon-post-button.png"/></a>
-            </div>
-          </form>
-        </div>
-        <div class="post">
-          <div class="head flex">
-            <img class="portrait" src="./assets/media/post-person-1.png"/>
-            <div class="flex flex-sb">
-              <div class="flex name-job">
-                <span>Tim Twizzlers</span>
-                <span>Co-founder of PirateFlix</span>
-              </div>
-              <div class="flex">
-                <a href="#"><img src="./assets/media/icon-3-dots.png"/></a>
-                <span>1 hour ago</span>
-              </div>
-            </div>
-          </div>
-          <div class="message">
-            <p>
-              Our company is currently looking for a senior iOS engineer with at least 16 years
-               of experience in Swift. A degree in CS is optional but a black belt in Brazilian
-               Jujitsu is mendatory. Preferably female. Anyways, here’s a cool picture of my car.
-            </p>
-            <img src="./assets/media/img-post-1.jpg"/>
-          </div>
-          <ul class="flex">
-            <li><a href="#"><img src="./assets/media/icon-heart-light.png" /></a></li>
-            <li><a href="#"><img src="./assets/media/icon-chat-light.png" /></a></li>
-            <li><a href="#"><img src="./assets/media/icon-paper-plane-light.png" /></a></li>
-          </ul>
-        </div>
-        <div class="post">
-          <div class="head flex">
-            <img class="portrait" src="./assets/media/post-person-2.png"/>
-            <div class="flex flex-sb">
-              <div class="flex name-job">
-                <span>Selena Skittles</span>
-                <span>iOS Software Engineering</span>
-              </div>
-              <div class="flex">
-                <a href="#"><img src="./assets/media/icon-3-dots.png"/></a>
-                <span>1 hour ago</span>
-              </div>
-            </div>
-          </div>
-          <div class="message">
-            <p>
-              DO NOT apply for a job at PirateFlix. I applied for the position of an iOS engineer and got
-               rejected bc I didn’t have at least 16 years of expeirence in Swift. The Swift programming 
-               language itself is barely 10 years old btw. Unbelievable.
-            </p>
-            <img src="./assets/media/img-post-2.jpg"/>
-          </div>
-          <ul class="flex">
-            <li><a href="#"><img src="./assets/media/icon-heart-light.png" /></a></li>
-            <li><a href="#"><img src="./assets/media/icon-chat-light.png" /></a></li>
-            <li><a href="#"><img src="./assets/media/icon-paper-plane-light.png" /></a></li>
-          </ul>
-        </div>
-      </section>
-      <aside class="right-aside">
-        <h2>People you may know</h2>
-        <ul class="users loading">
-          <li class="user-placeholder"></li>
+        <ul class="flex header-mid-icons flex-sb">
+          <li><a href=""><img src="./assets/media/icon-home-dark.png" /></a></li>
+          <li><a href=""><img src="./assets/media/icon-chat-dark.png" /></a></li>
+          <li><a href=""><img src="./assets/media/icon-bell-dark.png" /></a></li>
+          <li><a href=""><img src="./assets/media/icon-heart-dark.png" /></a></li>
         </ul>
-      </aside>
-    </div>
-  </main>
-  <footer>
-    <ul class="container flex flex-sb">
-      <li><a href="#"></a>©2024 JobJobGo</a></li>
-      <li><a href="#">User Agreement</a></li>
-      <li><a href="#">Community Guidelines</a></li>
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Send Feedback</a></li>
-    </ul>
-  </footer>
-</body>
-
+        <div class="flex header-right-content flex-sb">
+          <div class="pfp-name center">
+            <div class="header-pfp">
+              <img src="./assets/media/img-olivia.png" />
+            </div>
+            <span>Olivia Oreo</span>
+          </div>
+          <img class="dropdown-icon" src="./assets/media/icon-down-arrow.png" alt="">
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container flex flex-sb">
+        <aside class="left-aside">
+          <div class="banner-img">
+            <img class="aside-olivia" src="./assets/media/img-olivia.png" alt="">
+            <div class="followers-following flex flex-sb">
+              <div class="profile-stat">
+                <span>1,203</span>
+                <span>Followers</span>
+              </div>
+              <div class="profile-stat">
+                <span>1,203</span>
+                <span>Followers</span>
+              </div>
+            </div>
+          </div>
+          <div class="username-tag">
+            <span>Olivia Oreo</span>
+            <span>@olivia_oreo</span>
+          </div>
+          <p class="bio">
+            Hello👋 I am a product manager based in South Africa.
+          </p>
+          <button class="premium">Upgrade to Premium</button>
+        </aside>
+        <section class="content">
+          <div class="form">
+            <form>
+              <input type="text" placeholder="What's in your mind?">
+              <div class="flex flex-sb">
+                <ul class="flex">
+                  <a href="#">
+                    <li><img src="./assets/media/icon-image.png" /><span>image</span></li>
+                  </a>
+                  <a href="#">
+                    <li><img src="./assets/media/icon-video.png" /><span>video</span></li>
+                  </a>
+                  <a href="#">
+                    <li><img src="./assets/media/icon-mood.png" /><span>mood</span></li>
+                  </a>
+                </ul>
+                <a href="#"><img src="./assets/media/icon-post-button.png" /></a>
+              </div>
+            </form>
+          </div>
+          <div class="post">
+            <div class="head flex">
+              <img class="portrait" src="./assets/media/post-person-1.png" />
+              <div class="flex flex-sb">
+                <div class="flex name-job">
+                  <span>Tim Twizzlers</span>
+                  <span>Co-founder of PirateFlix</span>
+                </div>
+                <div class="flex">
+                  <a href="#"><img src="./assets/media/icon-3-dots.png" /></a>
+                  <span>1 hour ago</span>
+                </div>
+              </div>
+            </div>
+            <div class="message">
+              <p>
+                Our company is currently looking for a senior iOS engineer with at least 16 years
+                of experience in Swift. A degree in CS is optional but a black belt in Brazilian
+                Jujitsu is mendatory. Preferably female. Anyways, here’s a cool picture of my car.
+              </p>
+              <img src="./assets/media/img-post-1.jpg" />
+            </div>
+            <ul class="flex">
+              <li><a href="#"><img src="./assets/media/icon-heart-light.png" /></a></li>
+              <li><a href="#"><img src="./assets/media/icon-chat-light.png" /></a></li>
+              <li><a href="#"><img src="./assets/media/icon-paper-plane-light.png" /></a></li>
+            </ul>
+          </div>
+          <div class="post">
+            <div class="head flex">
+              <img class="portrait" src="./assets/media/post-person-2.png" />
+              <div class="flex flex-sb">
+                <div class="flex name-job">
+                  <span>Selena Skittles</span>
+                  <span>iOS Software Engineering</span>
+                </div>
+                <div class="flex">
+                  <a href="#"><img src="./assets/media/icon-3-dots.png" /></a>
+                  <span>1 hour ago</span>
+                </div>
+              </div>
+            </div>
+            <div class="message">
+              <p>
+                DO NOT apply for a job at PirateFlix. I applied for the position of an iOS engineer and got
+                rejected bc I didn’t have at least 16 years of expeirence in Swift. The Swift programming
+                language itself is barely 10 years old btw. Unbelievable.
+              </p>
+              <img src="./assets/media/img-post-2.jpg" />
+            </div>
+            <ul class="flex">
+              <li><a href="#"><img src="./assets/media/icon-heart-light.png" /></a></li>
+              <li><a href="#"><img src="./assets/media/icon-chat-light.png" /></a></li>
+              <li><a href="#"><img src="./assets/media/icon-paper-plane-light.png" /></a></li>
+            </ul>
+          </div>
+        </section>
+        <aside class="right-aside">
+          <h2>People you may know</h2>
+          <ul class="users loading">
+            <li class="user-placeholder"></li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+    <footer>
+      <ul class="container flex flex-sb">
+        <li><a href="#"></a>©2024 JobJobGo</a></li>
+        <li><a href="#">User Agreement</a></li>
+        <li><a href="#">Community Guidelines</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Send Feedback</a></li>
+      </ul>
+    </footer>
+  </body>
 </html>
