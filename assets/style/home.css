@@ -101,7 +101,10 @@ header {
 
 main {
     min-height: 500px;
-
+    .container {
+      align-items: flex-start;
+      
+    }
     aside,
     section>div {
         background-color: var(--white);
@@ -109,13 +112,13 @@ main {
 
     aside {
         width: 30%;
-        padding: 0px 20px;
-        margin: 50px;
+        padding-top: var(--main-widget-padding);
+        padding-bottom: var(--main-widget-padding);
+        margin-top: var(--main-widget-gap);
         border-radius: var(--widget-border-radius);
     }
 
     .left-aside {
-      padding: 0;
       overflow: hidden;
       height: auto;
       .banner-img {
@@ -172,6 +175,7 @@ main {
       .bio {
         text-align: center;
         margin-top: 15px;
+        padding-inline: var(--main-widget-padding);
       }
       .premium {
         display: block;
@@ -190,7 +194,8 @@ main {
     .content {
         width: 50%;
         text-align: center;
-        margin-top: 50px;
+        margin-top: var(--main-widget-gap);
+        margin-inline: var(--main-widget-gap);
 
         .form{
             background-color: var(--white);
@@ -231,7 +236,7 @@ main {
             background-color: var(--white);
             padding: 20px;
             border-radius: 20px;
-            margin-top: 30px;
+            margin-top: var(--main-widget-gap);
             color: var(--color);
 
             .head {
@@ -289,44 +294,45 @@ main {
     }
 
     .right-aside {
-        margin: 50px 0 0 20px;
+      padding: var(--main-widget-padding);
+      h2 {
+        font-size: 20px;
+        line-height: 1;
+        margin-bottom: var(--main-widget-padding);
+      }
 
-        h2 {
-            font-size: 20px;
+      .user {
+        background-color: var(--background-color);
+        border-radius: 20px;
+        align-items: center;
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 14px;
+        color: var(--color);
+
+        img {
+          aspect-ratio: 1 / 1;
+
+          &.portrait {
+            border: 1px solid var(--white);
+            border-radius: 50%;
+          }
+
+          &.add {
+            width: 20px;
+            height: 20px;
+          }
         }
 
-        .user {
-            background-color: var(--background-color);
-            border-radius: 20px;
-            align-items: center;
-            margin: 10px 0;
-            padding: 10px;
-            font-size: 14px;
-            color: var(--color);
+        .grid {
+          width: 100%;
+          padding-left: 10px;
 
-            img {
-                aspect-ratio: 1 / 1;
-
-                &.portrait {
-                    border: 1px solid var(--white);
-                    border-radius: 50%;
-                }
-
-                &.add {
-                    width: 20px;
-                    height: 20px;
-                }
-            }
-
-            .grid {
-                width: 100%;
-                padding-left: 10px;
-
-                span:last-of-type {
-                    color: var(--dark-gray);
-                }
-            }
+          span:last-of-type {
+            color: var(--dark-gray);
+          }
         }
+      }
     }
 }
 

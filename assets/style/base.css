@@ -11,6 +11,8 @@
   --input-border-radius: 60px;
   --widget-border-radius: 25px;
   --small-gray-text: 12px;
+  --main-widget-gap: 30px;
+  --main-widget-padding: 20px;
 }
 
 .container {
