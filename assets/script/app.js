@@ -30,14 +30,22 @@ function login(email, password) {
     const user = loadItem("user");
     return user.email === email && user.password === password;
 }
+
 function addUsers(users) {
+    const fragment = document.createDocumentFragment();
     users.forEach(u => {
         const { name: { title, first, last }, picture: { thumbnail }, location:{city} } = u;
-        // add to users' container
-        usersContainer.innerHTML += `<li class='user flex flex-sb'><img class='portrait' src='${thumbnail}' />
+
+        const li = document.createElement('li');
+        li.className = 'user flex flex-sb';
+        li.innerHTML = `<img class='portrait' src='${thumbnail}' />
         <div class='grid'><span>${first} ${last}</span><span>${city}</span></div>
-        <img class='add' src='./assets/media/icon-plus.png'/></li>`;
+        <img class='add' src='./assets/media/icon-plus.png'/>`;
+        fragment.appendChild(li);
     });
+    usersContainer.innerHTML = '';
+    // DocumentFragment should add fetched data all at once instead of one by one
+    usersContainer.appendChild(fragment);
 }
 
 // Main

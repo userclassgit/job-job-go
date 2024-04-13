@@ -331,6 +331,12 @@ main {
 
   .right-aside {
     padding: var(--main-widget-padding);
+    min-height: 890px;
+
+    .user-placeholder {
+      background-color: var(--white);
+      height: 801.5px;
+    }
 
     h2 {
       font-size: 20px;
