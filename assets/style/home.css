@@ -335,7 +335,11 @@ main {
 
     .user-placeholder {
       background-color: var(--white);
-      height: 801.5px;
+      min-height: 801.5px;
+    }
+
+    .users.loading .user{
+      display: none;
     }
 
     h2 {

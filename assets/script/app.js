@@ -33,19 +33,35 @@ function login(email, password) {
 
 function addUsers(users) {
     const fragment = document.createDocumentFragment();
-    users.forEach(u => {
-        const { name: { title, first, last }, picture: { thumbnail }, location:{city} } = u;
 
-        const li = document.createElement('li');
-        li.className = 'user flex flex-sb';
-        li.innerHTML = `<img class='portrait' src='${thumbnail}' />
-        <div class='grid'><span>${first} ${last}</span><span>${city}</span></div>
-        <img class='add' src='./assets/media/icon-plus.png'/>`;
-        fragment.appendChild(li);
+    // An array of promises that resolve when the images are loaded
+    const imagePromises = users.map(u => {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = resolve;
+            img.onerror = reject;
+            img.src = u.picture.thumbnail;
+        });
     });
-    usersContainer.innerHTML = '';
-    // DocumentFragment should add fetched data all at once instead of one by one
-    usersContainer.appendChild(fragment);
+
+    // Basically Promise.all ensures that li elements are not added
+    // to the page until ALL images have loaded successfully.
+    Promise.all(imagePromises).then(() => {
+        users.forEach(u => {
+            const { name: { title, first, last }, picture: { thumbnail }, location:{city} } = u;
+
+            const li = document.createElement('li');
+            li.className = 'user flex flex-sb';
+            li.innerHTML = `<img class='portrait' src='${thumbnail}' />
+            <div class='grid'><span>${first} ${last}</span><span>${city}</span></div>
+            <img class='add' src='./assets/media/icon-plus.png'/>`;
+            fragment.appendChild(li);
+        });
+
+        usersContainer.innerHTML = '';
+        usersContainer.appendChild(fragment);
+        usersContainer.classList.remove('loading');
+    });
 }
 
 // Main
