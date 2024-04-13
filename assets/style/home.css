@@ -152,6 +152,7 @@ main {
       span:first-child {
         font-size: 24px;
         line-height: 1;
+        margin-top: 4px;
       }
 
       span:nth-child(2) {
@@ -227,6 +228,10 @@ main {
         border: none;
       }
 
+      a {
+        text-decoration: none;
+      }
+
       ul li {
         display: flex;
         gap: 5px;
@@ -283,7 +288,7 @@ main {
 
         img {
           &.portrait {
-            aspect-ratio: 1 / 1;
+            width: 60px;
             border-radius: 50%;
             border: 4px solid var(--background-color);
           }
@@ -292,17 +297,23 @@ main {
 
       .message {
         text-align: left;
-
         img {
           border-radius: 20px;
           border: 1px solid var(--white);
           margin: 20px 0;
         }
+        p {
+          line-height: 1.5;
+        }
+      }
+
+      ul {
+        gap: 3px;
       }
 
       ul li img {
-        aspect-ratio: 1 / 1;
-        width: 25px;
+        /* aspect-ratio: 1 / 1; */
+        width: 23px;
         margin: 0 20px 0 0;
       }
     }
@@ -335,8 +346,9 @@ main {
         }
 
         &.add {
-          width: 20px;
-          height: 20px;
+          width: 17px;
+          height: 17px;
+          cursor: pointer;
         }
       }
 
