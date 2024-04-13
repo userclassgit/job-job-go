@@ -2,8 +2,6 @@
 
 Click [here](https://userclassgit.github.io/job-job-go/) to check out the demo.
 
-**Credentials**
-
+**Credentials:**
 email: andre@github.com
-
 password: 123
