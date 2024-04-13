@@ -268,8 +268,13 @@ main {
           padding-left: 10px;
 
           >div span:last-of-type {
+            line-height: 1;
+          }
+
+          >div span:last-of-type {
             color: var(--dark-gray);
             font-size: var(--small-gray-text);
+            line-height: 1;
           }
 
           >div:last-of-type {
