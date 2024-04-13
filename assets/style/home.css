@@ -262,12 +262,17 @@ main {
         justify-content: space-between;
         margin-bottom: 20px;
 
+        .name-job {
+          flex-direction: column;
+          justify-content: space-around;
+        }
+
         >div {
           width: 100%;
           text-align: left;
           padding-left: 10px;
 
-          >div span:last-of-type {
+          >div span:first-of-type {
             line-height: 1;
           }
 
