@@ -138,17 +138,20 @@ main {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: calc(100% + 20px);
-        width: 150px;
+        top: calc(100% + 4px);
+        width: 220px;
         .profile-stat {
           display: flex;
           flex-direction: column;
           align-items: center;
+          /* jeff */
           span:first-child {
-            
+            font-size: 20px;
+            line-height: 1;
           }
           span:nth-child(2) {
-
+            color: var(--dark-gray);
+            font-size: var(--small-gray-text);
           }
         }
       }
